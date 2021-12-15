@@ -1,0 +1,26 @@
+use training;
+SELECT * from EMployees;
+SELECT * from Students;
+/*
+It is not possible to test for null values with comparison operators such as =,<,or,<>
+We will have to use the IS NULL and IS NOT NULL operators instead.
+IS NULL SYNTAX
+
+SELECT COLUMN_NAMES 
+FROM TABLE_NAME
+WHERE COLUMN_NAME IS NULL
+*/
+select LASTNAME,FIRSTNAME,ADDRESS,CITY
+FROM EMPLOYEES
+WHERE EMPLOYEEID IS NULL;
+
+/*
+IS NOT NULL SYNTAX 
+SELECT COLUMN_NAMES
+FROM TABLE_NAME
+WHERE COLUMN_NAME IS NOT NULL
+*/
+select LASTNAME,FIRSTNAME 
+FROM EMPLOYEES
+WHERE CITY IS NOT NULL;
+
